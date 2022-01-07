@@ -1,7 +1,6 @@
 package StringAndArray;
 
 public class ZeroMatrix {
-/*
     void SetZeros(int[][] matrix) {
         boolean rowHasZeros = false;
         boolean colHasZeros = false;
@@ -30,20 +29,42 @@ public class ZeroMatrix {
             }
         }
 
-        void nullifyRow(int[][] matriz; int row){
-            for(int i = 0; i < matriz[0].length; i++){
-                matriz[row][i] = 0;
+
+
+        for(int  i = 1; i < matrix.length; i++){
+            if(matrix[i][0] == 0){
+                nullifyRow(matrix, i);
             }
         }
 
-        void nullifyColum(int[][] matriz; int col){
-            for(int j = 0; j < matriz.length; j++){
-                matriz[j][col] = 0;
+        for(int j = 1; j < matrix[0].length; j++){
+            if(matrix[0][j] == 0){
+                nullifyColum(matrix, j);
             }
+        }
+
+        if(rowHasZeros){
+            nullifyRow(matrix, 0);
+        }
+
+        if(colHasZeros){
+            nullifyColum(matrix, 0);
         }
 
 
 
+    }
+
+    void nullifyRow(int[][] matriz, int row){
+        for(int i = 0; i < matriz[0].length; i++){
+            matriz[row][i] = 0;
+        }
+    }
+
+    void nullifyColum(int[][] matriz, int col){
+        for(int j = 0; j < matriz.length; j++){
+            matriz[j][col] = 0;
+        }
     }
 
     public static void main(String[] args) {
@@ -52,6 +73,5 @@ public class ZeroMatrix {
         System.out.println(matrix[0][1]);
 
     }
-    */
 
 }
