@@ -29,6 +29,16 @@ public class RemoveDups {
         }
     }
 
+    int longitudLlist(){
+        Node n = head;
+        int count = 0;
+        while(n != null){
+            n = n.next;
+            count++;
+        }
+        return count;
+    }
+
     void imprimiLinkedList(){
         Node n = head;
         while(n != null){
@@ -56,5 +66,8 @@ public class RemoveDups {
         llist.deleteDup(llist.head);
 
         llist.imprimiLinkedList();
+
+        int longitud = llist.longitudLlist();
+        System.out.println(longitud);
     }
 }
